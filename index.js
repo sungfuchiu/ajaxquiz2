@@ -25,10 +25,6 @@ app.get("/", (req, res) => {
     name: "Sung-Fu Chiu",
     sid: "300371200",
   });
-  myExamRecord = new ExamRecord({
-    name: "Sung-Fu Chiu",
-    sid: "300371200",
-  });
   ExamRecord.insertMany([myExamRecord])
     .then(() => {
       console.log("Successfully insert an exam record.");
