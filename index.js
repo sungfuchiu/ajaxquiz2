@@ -32,16 +32,6 @@ app.get("/", (req, res) => {
   ExamRecord.insertMany([myExamRecord])
     .then(() => {
       console.log("Successfully insert an exam record.");
-      ExamRecord.find()
-        .then((quizzes) => {
-          quizzes.forEach((quiz) => {
-            console.log(`name: ${quiz.name}`);
-            console.log(`sid: ${quiz.sid}`);
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
 
       res.send("Name and sid are sent to the database");
     })
